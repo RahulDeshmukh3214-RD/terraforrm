@@ -1,8 +1,9 @@
 name: CI Workflow
+
 on: [push]
+
 jobs:
   build:
-   runs-on: ubuntu latest
-   steps:
-    - run: echo "Building the project"
-    
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building the project"
