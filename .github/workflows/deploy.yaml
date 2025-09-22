@@ -4,4 +4,5 @@ jobs:
   build:
    runs-on: ubuntu latest
    steps:
-    -run:echo "Building the project"
+    - run: echo "Building the project"
+    
