@@ -3,7 +3,7 @@ name: Terraform CI/CD
 on:
  push:
   branches:
-   - rahul
+   - main
 jobs:
   Terraform:
     runs-on: ubuntu-latest
@@ -40,5 +40,5 @@ jobs:
 
       # Step 8: Apply (CD)
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/rahul'  # only run on rahul branch
+        if: github.ref == 'refs/heads/main'  # only run on rahul branch
         run: terraform apply -auto-approve -input=false
