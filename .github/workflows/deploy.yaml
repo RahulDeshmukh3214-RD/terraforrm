@@ -11,15 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
+
+      - name: List repo files
+        run: ls -R
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.9.0
+
 
       - name: Terraform Init
-        working-directory: terraforrm
         run: terraform init
+        working-directory: .
 
-      - name: Terraform Plan
-        working-directory: terraforrm
-        run: terraform plan -input=false
+  
