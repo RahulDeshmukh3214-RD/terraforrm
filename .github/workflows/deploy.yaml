@@ -7,3 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Building the project"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "Testing the project"    
