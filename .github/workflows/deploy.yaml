@@ -28,7 +28,14 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
       - name: run Deploy command
-        run: echo "Deployed Successfully"  
+        run: echo "Deployed Successfully"
+  Production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - name: run Production command
+        run: echo "Production Successful"      
 
 
       
