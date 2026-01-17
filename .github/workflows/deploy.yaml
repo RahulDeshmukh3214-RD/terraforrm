@@ -8,10 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repository
+      - name: checkout code
         uses: actions/checkout@v4
       - name: "deploy the code"
-        runs-on: ubuntu-latest
         run: echo "deploying the code..."  
 
       
