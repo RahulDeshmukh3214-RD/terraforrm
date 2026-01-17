@@ -1,41 +1,18 @@
-name: Simple CI Pipeline
-
+name: CI Pipeline
 on:
   push:
     branches:
       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v4
-
-      - name: Print system info
-        run: uname -a
-
-      - name: Run build command
-        run: echo "Build completed successfully"
-
-      - name: Run test command
-        run: echo "All tests passed"
-  
-  Deploy:
+jobs: 
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source code
+      - name: checkout repository
         uses: actions/checkout@v4
-      - name: run Deploy command
-        run: echo "Deployed Successfully"
-  Production:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v4
-      - name: run Production command
-        run: echo "Production Successful"      
-
+      - name: "deploy the code"
+        runs-on: ubuntu-latest
+        run: echo "deploying the code..."  
 
       
+  

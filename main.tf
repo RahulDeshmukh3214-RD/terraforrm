@@ -1,15 +1,13 @@
 provider "aws" {
-  region = var.region
-
+  region = "us-west-2"
 }
-resource "aws_instance" "web" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
 
+
+resource "aws_instance" "example" {
+  ami = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2_micro"
   tags = {
-    Name = "terraform-Ec2"
+    Name = "example-instance"
   }
 
 }
-
-
