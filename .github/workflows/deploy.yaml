@@ -13,5 +13,14 @@ jobs:
       - name: "deploy the code"
         run: echo "deploying the code..."  
 
+jobs:
+  build:
+   runs-on: node:14
+   steps:
+    - name: checkout code
+      uses: actions/checkout@v4
+    - name: install dependencies
+      run: npm install        
+
       
   
