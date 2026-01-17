@@ -13,7 +13,7 @@ jobs:
       - name: "deploy the code"
         run: echo "deploying the code..."  
 
-jobs:
+
   build:
    runs-on: node:14
    steps:
