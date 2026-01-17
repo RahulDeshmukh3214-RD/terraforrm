@@ -24,7 +24,7 @@ jobs:
   
   Deploy:
     runs-on: ubuntu-latest
-     steps:
+    steps:
       - name: Checkout source code
         uses: actions/checkout@v4
       - name: run Deploy command
